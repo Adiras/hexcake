@@ -1,0 +1,12 @@
+Usage: haxcake [flags] [options] arguments
+
+Arguments:
+  <file>     file to dump
+
+Options:
+  -o         number system used for offsets
+             accepted values: <bin|dec|hex|oct>
+
+Flags:
+  --help     display help menu
+  --version  display version number
