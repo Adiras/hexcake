@@ -31,22 +31,14 @@ sourceCompatibility = 1.8
 // Java version to generate classes for
 targetCompatibility = 1.8
 
-apply plugin: 'jacoco'
-apply plugin: 'coveralls'
+plugins {
+    id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.6.3'
+}
 
 jacocoTestReport {
     reports {
-        xml.enabled = true
+        xml.enabled = true // coveralls plugin depends on xml format report
         html.enabled = true
-    }
-}
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.1'
     }
 }
