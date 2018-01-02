@@ -7,6 +7,12 @@ apply plugin: 'java'
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
 
+// Code coverage reports
+apply plugin: "jacoco"
+
+// This plugin helps to upload coverage data to Coveralls
+apply plugin: "com.github.kt3k.coveralls"
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -31,14 +37,21 @@ sourceCompatibility = 1.8
 // Java version to generate classes for
 targetCompatibility = 1.8
 
-plugins {
-    id 'jacoco'
-    id 'com.github.kt3k.coveralls' version '2.6.3'
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2"
+    }
 }
 
 jacocoTestReport {
     reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
+        // Coveralls plugin depends on xml format report
+        xml.enabled = true
         html.enabled = true
     }
 }
