@@ -7,21 +7,18 @@ apply plugin: 'java'
 // Apply the application plugin to add support for building an application
 apply plugin: 'application'
 
-// Plugins that send coverage data to coveralls.io
-apply plugin: 'jacoco'
-apply plugin: 'com.github.kt3k.coveralls'
-
-cobertura.coverageFormats = ['html', 'xml']
-
 buildscript {
-    repositories {
-        mavenCentral()
-    }
-  
+    repositories { jcenter() }
     dependencies {
-        compile 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
+        classpath 'net.saliman:gradle-cobertura-plugin:2.2.2'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:0.3.1'
     }
 }
+
+apply plugin: 'cobertura'
+apply plugin: 'coveralls'
+
+cobertura.coverageFormats = ['html', 'xml']
 
 // In this section you declare where to find the dependencies of your project
 repositories {
