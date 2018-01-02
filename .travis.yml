@@ -8,4 +8,4 @@ os:
 - linux
 
 after_success:
-- ./gradle cobertura coveralls
+- ./gradlew cobertura coveralls
