@@ -1,0 +1,56 @@
+group 'me.adiras'
+version '0.1.0'
+
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+// Apply the application plugin to add support for building an application
+apply plugin: 'application'
+
+// Plugins that send coverage data to coveralls.io
+apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+  
+    dependencies {
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2"
+    }
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+
+    // Command line parser
+    compile 'com.beust:jcommander:1.72'
+}
+
+jacocoTestReport {
+    reports {
+        // Coveralls plugin depends on xml format report
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+// Define the main class for the application
+mainClassName = 'me.adiras.hexcake.App'
+
+// Java version compatibility to use when compiling Java source
+sourceCompatibility = 1.8
+
+// Java version to generate classes for
+targetCompatibility = 1.8
