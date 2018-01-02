@@ -7,5 +7,5 @@ jdk:
 os:
 - linux
 
-script:
-- ./gradlew cobertura coveralls
+after_success:
+  - gradle jacocoTestReport coveralls
