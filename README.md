@@ -1,5 +1,6 @@
 # hexcake
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e16f7703c3f343ab8a6cae05f941548f)](https://www.codacy.com/app/Adiras/hexcake?utm_source=github.com&utm_medium=referral&utm_content=Adiras/hexcake&utm_campaign=badger)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fca7530dff5248f8a0656b8d957a91fc)](https://www.codacy.com/app/Adiras/hexcake?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Adiras/hexcake&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/Adiras/hexcake.svg?branch=master)](https://travis-ci.org/Adiras/hexcake)
