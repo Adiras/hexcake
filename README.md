@@ -1,6 +1,8 @@
 # hexcake
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Build Status](https://travis-ci.org/Adiras/hexcake.svg?branch=master)](https://travis-ci.org/Adiras/hexcake)
+[![Coverage Status](https://coveralls.io/repos/github/Adiras/hexcake/badge.svg?branch=master)](https://coveralls.io/github/Adiras/hexcake?branch=master)
 
 Utility which displays the specified files, or the standard input in hexadecimal view.
 
