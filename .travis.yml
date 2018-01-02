@@ -7,5 +7,5 @@ jdk:
 os:
 - linux
 
-after_success:
+script:
 - ./gradlew cobertura coveralls
